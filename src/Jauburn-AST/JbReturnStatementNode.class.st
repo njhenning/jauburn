@@ -7,6 +7,11 @@ Class {
 	#category : #'Jauburn-AST-Core'
 }
 
+{ #category : #'as yet unclassified' }
+JbReturnStatementNode >> executeIn: environment [
+expression do: [ :each | each executeIn: environment ]
+]
+
 { #category : #accessing }
 JbReturnStatementNode >> expression [
 	^ expression

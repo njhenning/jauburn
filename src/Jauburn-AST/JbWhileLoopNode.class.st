@@ -1,5 +1,5 @@
 Class {
-	#name : #JbIfNode,
+	#name : #JbWhileLoopNode,
 	#superclass : #Object,
 	#instVars : [
 		'condition',
@@ -9,27 +9,21 @@ Class {
 }
 
 { #category : #accessing }
-JbIfNode >> condition [
-	^ condition
+JbWhileLoopNode >> condition [ 
+^condition
 ]
 
 { #category : #accessing }
-JbIfNode >> condition: anObject [
+JbWhileLoopNode >> condition: anObject [
 	condition := anObject
 ]
 
-{ #category : #'as yet unclassified' }
-JbIfNode >> evaluateIn: environment [ 
-
- ^ (environment at: condition) evaluate: trueStatements.
-]
-
 { #category : #accessing }
-JbIfNode >> trueStatements [
+JbWhileLoopNode >> trueStatements [
 	^ trueStatements
 ]
 
 { #category : #accessing }
-JbIfNode >> trueStatements: anObject [
+JbWhileLoopNode >> trueStatements: anObject [
 	trueStatements := anObject
 ]

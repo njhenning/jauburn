@@ -8,6 +8,15 @@ Class {
 	#category : #'Jauburn-AST-Core'
 }
 
+{ #category : #'as yet unclassified' }
+JbArity1OperatorNode >> evaluateIn: environment [ 
+
+ | operandValue |
+ operandValue := self operand evaluateIn: environment.
+ self operator = $-
+ 	ifTrue: [ ^ operandValue negated].
+]
+
 { #category : #accessing }
 JbArity1OperatorNode >> operand [
 	^ operand
